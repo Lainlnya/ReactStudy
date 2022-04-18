@@ -19,7 +19,8 @@ class Habits extends Component {
     const habits = [...this.state.habits];
     const index = habits.indexOf(habit);
     habits[index].count++;
-    this.setState({ habits });
+    //이렇게 적어도 가능하다(키와 키 값을 전달하는 용도)
+    this.setState({ habits: habits });
   };
 
   handleDecrement = (habit) => {
