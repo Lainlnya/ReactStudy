@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Habit from './habit';
+import Navbar from './navbar';
 
 class Habits extends Component {
   state = {
@@ -38,19 +39,26 @@ class Habits extends Component {
     this.setState({ habits });
   };
 
+  handleAdd = (habit) => {
+    const habits = [...this.state.habits];
+  };
+
   render() {
     return (
-      <ul>
-        {this.state.habits.map((habit) => (
-          <Habit
-            key={habit.id}
-            habit={habit}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-          />
-        ))}
-      </ul>
+      <>
+        <Navbar onAdd={this.handleAdd} />
+        <ul>
+          {this.state.habits.map((habit) => (
+            <Habit
+              key={habit.id}
+              habit={habit}
+              onIncrement={this.handleIncrement}
+              onDecrement={this.handleDecrement}
+              onDelete={this.handleDelete}
+            />
+          ))}
+        </ul>
+      </>
     );
   }
 }

@@ -6,9 +6,6 @@ class App extends Component {
   render() {
     return (
       <>
-        <nav>
-          <i class="fa-solid fa-leaf"></i>
-        </nav>
         <Habits />;
       </>
     );
