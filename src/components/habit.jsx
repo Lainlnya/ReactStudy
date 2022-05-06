@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
-  //부모컴포넌트로부터 전달받은 state를 보여주기만 하면 되기 때문에 state가 존재할 필요는 없다.
-  // state = {
-  //     count: 0,
-  // };
+class Habit extends PureComponent {
+  componentDidMount() {
+    console.log(`habit : ${this.props.habit.name} DidMount`);
+  }
+  componentWillUnmount() {
+    console.log(`habit : ${this.props.habit.name} UnMount`);
+  }
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
     //state를 업데이트할 때는 setState를 반드시 해줘야 state가 변경되었는지 아닌지 확인 가능하다.
