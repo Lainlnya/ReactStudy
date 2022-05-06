@@ -20,7 +20,7 @@ class Habit extends Component {
     this.props.onDelete(this.props.habit);
   };
   render() {
-    console.log('props' + this.props.habit);
+    console.log('habit');
     const { name, count } = this.props.habit;
     return (
       <>

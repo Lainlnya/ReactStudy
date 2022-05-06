@@ -26,6 +26,26 @@ nav {
   background-color: #027f02;
   border-radius: 50%;
 }
+.add_form {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.add_input {
+  font-size: 2rem;
+  margin-right: 0.2em;
+}
+.add_button,
+.reset_button {
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 0.3em 0.5em;
+  background-color: #027f02;
+  color: white;
+}
+.reset_button {
+  margin-left: 2rem;
+}
+
 button {
   outline: none;
   border: 0;
