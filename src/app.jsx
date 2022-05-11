@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './app.css';
+import styles from './app.module.css';
 import HabitAddForm from './components/habitAddForm';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
@@ -74,7 +74,7 @@ class App extends Component {
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
         />
-        <button className="reset_button" onClick={this.resetAll}>
+        <button className={styles.reset_button} onClick={this.resetAll}>
           Reset All
         </button>
       </>

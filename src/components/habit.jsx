@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import styles from '../app.module.css';
 
 class Habit extends PureComponent {
   componentDidMount() {
@@ -26,23 +27,26 @@ class Habit extends PureComponent {
     const { name, count } = this.props.habit;
     return (
       <>
-        <li className="habit">
-          <span className="habit_name">{name}</span>
-          <span className="habit_count">{count}</span>
+        <li className={styles.habit}>
+          <span className={styles.habit_name}>{name}</span>
+          <span className={styles.habit_count}>{count}</span>
           <button
-            className="habit_btn habit_increase"
+            className={`${styles.habit_btn} 
+            ${styles.habit_increase}`}
             onClick={this.handleIncrement}
           >
             <i className="fa-solid fa-square-plus"></i>
           </button>
           <button
-            className="habit_btn habit_decrease"
+            className={`${styles.habit_btn} 
+            ${styles.habit_decrease}`}
             onClick={this.handleDecrement}
           >
             <i className="fa-solid fa-square-minus"></i>
           </button>
           <button
-            className="habit_btn habit_delete"
+            className={`${styles.habit_btn} 
+            ${styles.habit_delete}`}
             onClick={this.handleDelete}
           >
             <i className="fa-solid fa-trash"></i>
